@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="warning">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/historialpaciente">
+        </ion-back-button>
+      </ion-buttons>
+    <ion-title>Nuevo Paciente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-row>
+  <ion-col>
+    <ion-card>
+      <ion-card-content>
+        <ion-input type="text" placeholder="Nombre del Paciente" #nombre></ion-input>
+        <ion-input type="text" placeholder="Edad" #edad></ion-input>
+        <ion-input type="text" placeholder="Altura en Cm" #altura></ion-input>
+        <ion-input type="text" placeholder="Peso en Kg" #peso></ion-input>
+        <ion-button color="success" (click)="guardarpaciente(nombre,edad,altura,peso)">
+          GUARDAR
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </ion-col>
+</ion-row>
+</ion-content>

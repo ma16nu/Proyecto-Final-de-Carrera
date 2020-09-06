@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-title>Sensores</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="goprincipal()">
+      <ion-icon name="globe">  
+      </ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let sensores of sensores" [routerLink]="['/sensores',sensores.id]">
+      <ion-avatar slot="start">
+        <ion-img [src]="sensores.imageURL"></ion-img>
+      </ion-avatar>
+      <ion-label>
+        {{sensores.title}}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

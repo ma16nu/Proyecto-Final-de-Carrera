@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>Historial de Pacientes</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="goprincipal()">
+      <ion-icon name="globe">  
+      </ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-list>
+  <ion-item *ngFor="let paciente of pacientes"[routerLink]="['/historialpaciente', paciente.jd]">
+  <ion-label>
+    {{paciente.nombre}}
+  </ion-label>
+  </ion-item>
+</ion-list>
+
+ <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+ <ion-fab-button color="dark" horizontal="end" (click)="nuevopaciente()">
+   <ion-icon name="add"></ion-icon>
+   </ion-fab-button>
+ </ion-fab>
+
+</ion-content>

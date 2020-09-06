@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">VersionFinal</string>
+    <string name="title_activity_main">VersionFinal</string>
+    <string name="package_name">com.manuelortiz.app</string>
+    <string name="custom_url_scheme">com.manuelortiz.app</string>
+</resources>

@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color='danger'>
+    <ion-title>
+      e-Health App
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-card>
+ <img src="assets/img/imagen.png"/>
+</ion-card>
+<ion-content>
+  <section>
+    <header></header>
+    <ion-button (click)="historialPacientes()" expand="block" color="medium">Historial de Pacientes</ion-button> 
+  </section>
+  <section>
+    <header></header>
+    <ion-button (click)="conectarDispositivo()" expand="block" color="medium">Conectar Bluetooth</ion-button> 
+  </section>
+  <section>
+    <header></header>
+    <ion-button (click)="sensores()" expand="block" color="medium">Sensores</ion-button> 
+  </section>
+</ion-content>

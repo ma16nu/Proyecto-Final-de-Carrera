@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color='secondary'>
+    <ion-title>Conectar Bluetooth</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="goprincipal()">
+      <ion-icon name="globe">  
+      </ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-button ion-button full class="submit-button" expand="block" (click)="listPairedDevices()">
+ <ion-icon name="refresh"></ion-icon>&nbsp;Buscar Dispositivos</ion-button>
+ <ion-row>
+   <ion-col>
+     <ion-list>
+      <ion-item *ngFor="let i of pairedList;let j=index">
+      <ion-label>{{i.name}}</ion-label>
+       <ion-label>{{i.id}}</ion-label>
+      </ion-item>
+     </ion-list>
+   </ion-col>
+ </ion-row>
+ <ion-button ion-button full class="submit-button" *ngIf="listToggle" (click)="selectDevice()">
+ <ion-icon name="bluetooth"></ion-icon>&nbsp;Conectar dispositivo Bluetooth</ion-button>
+ </ion-content>

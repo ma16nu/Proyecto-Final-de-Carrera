@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/historialpaciente">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>{{pacientes.nombre}}</ion-title>
+    <ion-buttons slot="end"> 
+      <ion-buttons (click)="borrar()">
+        <ion-icon name="trash"></ion-icon>
+      </ion-buttons>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col>
+      <h1 class ="ion-text-center">Edad: {{pacientes.edad}}</h1>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <h1 class ="ion-text-center">Altura: {{pacientes.altura}} (cm)</h1>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <h1 class ="ion-text-center">Peso: {{pacientes.peso}} (kg)</h1>
+    </ion-col>
+  </ion-row>
+</ion-content>
+
